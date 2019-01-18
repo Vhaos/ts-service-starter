@@ -1,6 +1,11 @@
 import { Schema } from 'mongoose';
 import uuidv4 from 'uuid/v4';
-import { uuid, trimmedString, readMapper, timestamps } from './utils';
+import {
+  uuid,
+  trimmedString,
+  readMapper,
+  timestamps,
+} from '../utils/schema.utils';
 
 const VerificationSchema = new Schema(
   {

@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import generateUUID from 'uuid/v4';
 import { SchemaTypes } from 'mongoose';
-import { User } from '../../models/user';
+import { User } from '../user/user.model';
 import env from '@app/common/config/env';
 
 /**

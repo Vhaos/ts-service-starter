@@ -5,11 +5,11 @@ import QueueService, { IQueueService } from '../services/queue';
 
 import RedisService, { IRedisService } from '../services/redis';
 
-import { UserRepository, UserRepo } from '@app/data/repositories/user';
+import { UserRepository, UserRepo } from '@app/data/user/user.repo';
 import {
   VerificationRepository,
   VerificationRepo,
-} from '@app/data/repositories/verification';
+} from '@app/data/verification/verification.repo';
 
 // import controllers
 import '../../server/controllers';

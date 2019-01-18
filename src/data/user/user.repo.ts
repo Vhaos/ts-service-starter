@@ -1,9 +1,9 @@
 import { Document } from 'mongoose';
 import { injectable } from 'inversify';
-import { BaseRepository } from './base';
-import { User, LoginDTO } from '../models/user';
-import UserSchema from '../schemas/user';
-import { Repository } from './utils/contract';
+import { BaseRepository } from '../base/base.repo';
+import { User, LoginDTO } from './user.model';
+import UserSchema from './user.schema';
+import { Repository } from '../contracts/repo.contract';
 
 @injectable()
 export class UserRepository extends BaseRepository<User> {

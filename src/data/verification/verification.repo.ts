@@ -1,9 +1,9 @@
 import { injectable, inject } from 'inversify';
-import { BaseRepository } from './base';
-import { Verification } from '../models/verification';
-import VerificationSchema from '../schemas/verification';
-import { Repository } from './utils/contract';
-import { User } from '../models/user';
+import { BaseRepository } from '../base/base.repo';
+import { Verification } from './verification.model';
+import VerificationSchema from './verification.schema';
+import { Repository } from '../contracts/repo.contract';
+import { User } from '../user/user.model';
 import constants from '@app/common/config/constants';
 import { IQueueService } from '@app/common/services/queue';
 

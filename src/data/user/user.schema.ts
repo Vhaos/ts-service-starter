@@ -7,7 +7,7 @@ import {
   timestamps,
   hashPassword,
   isValidPassword,
-} from './utils';
+} from '../utils/schema.utils';
 
 const UserSchema = new Schema(
   {

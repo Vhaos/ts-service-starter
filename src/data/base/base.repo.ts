@@ -1,7 +1,7 @@
 import mongoose, { Document, Model, Schema } from 'mongoose';
 import { injectable, unmanaged } from 'inversify';
-import { DuplicateModelError, ModelNotFoundError } from './utils/errors';
-import { Repository, Query, QueryResult } from './utils/contract';
+import { DuplicateModelError, ModelNotFoundError } from '../errors/repo.errors';
+import { Repository, Query, QueryResult } from '../contracts/repo.contract';
 
 @injectable()
 export class BaseRepository<T extends Document> implements Repository<T> {

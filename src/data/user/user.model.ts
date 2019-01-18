@@ -1,4 +1,4 @@
-import { Model } from '.';
+import { Model } from '../base/base.model';
 
 export interface User extends Model {
   email: string;

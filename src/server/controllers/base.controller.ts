@@ -3,11 +3,11 @@ import { Response } from 'express';
 import HttpStatus from 'http-status-codes';
 import _ from 'lodash';
 
-import { Query } from '@app/data/repositories/utils/contract';
+import { Query } from '@app/data/contracts/repo.contract';
 import {
   DuplicateModelError,
   ModelNotFoundError,
-} from '@app/data/repositories/utils/errors';
+} from '@app/data/errors/repo.errors';
 
 type PaginationOptions = Pick<
   Query,

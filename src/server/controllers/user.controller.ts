@@ -20,11 +20,11 @@ import {
   LoginDTO,
   ResetPasswordDTO,
   //ChangePasswordDTO,
-} from '@app/data/models/user';
-import { UserRepo } from '@app/data/repositories/user';
-import { VerificationRepo } from '@app/data/repositories/verification';
+} from '@app/data/user/user.model';
+import { UserRepo } from '@app/data/user/user.repo';
+import { VerificationRepo } from '@app/data/verification/verification.repo';
 
-import BaseController from './base';
+import BaseController from './base.controller';
 import * as JWT from '../utils/auth';
 import { login, resetPassword /* changePassword */ } from '../validators/user';
 import Validator from '../middlewares/validator';
