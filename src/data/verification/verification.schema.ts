@@ -1,22 +1,10 @@
-import { Schema } from 'mongoose';
-import uuidv4 from 'uuid/v4';
-import {
-  uuid,
-  trimmedString,
-  readMapper,
-  timestamps,
-} from '../utils/schema.utils';
+import uuidv4 from "uuid/v4";
+import { trimmedString } from "../utils/schema.utils";
+import { SchemaFactory } from "../base/base.schema";
 
-const VerificationSchema = new Schema(
-  {
-    _id: { ...uuid },
-    user_id: { ...trimmedString, required: true },
-    token: { ...trimmedString, default: uuidv4 },
-  },
-  {
-    ...readMapper,
-    ...timestamps,
-  },
-);
+const VerificationSchema = SchemaFactory({
+  user_id: { ...trimmedString, required: true },
+  token: { ...trimmedString, default: uuidv4 }
+});
 
 export default VerificationSchema;
