@@ -3,3 +3,4 @@ dist
 .env
 .env.staging
 yarn-error.log
+.DS_Store
