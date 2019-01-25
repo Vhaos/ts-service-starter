@@ -7,7 +7,8 @@
     "start:dev": "nodemon ./dist/server",
     "start:debug": "nodemon --inspect ./dist/server",
     "watch:tsc": "tsc --watch -p ./tsconfig.json",
-    "build:tsc": "tsc -p ./tsconfig.json"
+    "build:tsc": "tsc -p ./tsconfig.json",
+    "test": "jest"
   },
   "author": "chukwudioranu@ymail.com",
   "license": "ISC",
@@ -45,7 +46,9 @@
     "@types/mailgun-js": "^0.16.3",
     "@types/mongoose": "^5.3.5",
     "@types/redis": "^2.8.10",
-    "nodemon": "^1.18.9"
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "ts-jest": "^23.10.5"
   },
   "_moduleAliases": {
     "@app": "./dist"
