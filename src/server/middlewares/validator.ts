@@ -31,20 +31,20 @@ const validate = (data: any, schema: joi.AnySchema) => {
   };
 };
 
-export default (schema: AnySchema) => {
+export default (schema: AnySchema, context: string = "body") => {
   return (req: Request, res: Response, next: NextFunction) => {
-    const { err, value } = validate(req.body, schema);
+    const { err, value } = validate(req[context], schema);
 
     if (!err) {
-      req.body = value;
+      req[context] = value;
       return next();
     }
 
     //log error
     return res.jSend.error(
       err,
-      'One or more validation errors occured',
-      HttpStatus.UNPROCESSABLE_ENTITY,
+      "One or more validation errors occured",
+      HttpStatus.UNPROCESSABLE_ENTITY
     );
   };
 };

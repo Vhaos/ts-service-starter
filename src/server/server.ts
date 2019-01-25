@@ -44,7 +44,7 @@ export class Server {
   connectDB() {
     mongoose.set('useCreateIndex', true);
     mongoose.connect(
-      env.mongodb_uri,
+      env.mongodb_url,
       { useNewUrlParser: true },
     );
     this.db = mongoose.connection;
