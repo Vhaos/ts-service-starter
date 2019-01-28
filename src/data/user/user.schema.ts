@@ -2,8 +2,6 @@ import { SchemaTypes } from "mongoose";
 import {
   trimmedLowercaseString,
   trimmedString,
-  readMapper,
-  timestamps,
   hashPassword,
   isValidPassword
 } from "../utils/schema.utils";
@@ -14,7 +12,9 @@ const UserSchema = SchemaFactory({
   is_verified: { type: SchemaTypes.Boolean, default: false },
   password: { ...trimmedString, required: true, select: false },
   phone_number: { ...trimmedString, unique: true, required: true }
-})
+},
+  {timestamps: true}
+)
   .pre("save", hashPassword)
   .method("isValidPassword", isValidPassword);
 

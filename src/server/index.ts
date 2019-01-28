@@ -14,6 +14,6 @@ const httpServer = http.createServer(server.getServer().build());
 
 httpServer.listen(env.port);
 
-httpServer.on('listening', () => console.log('🚀 listening on ' + env.port));
+httpServer.on('listening', () => console.log('🚀  listening on ' + env.port));
 
-server.db.once('open', () => console.log('🤖 MongoDB Connected!'));
+server.db.once('open', () => console.log('🤖  MongoDB Connected!'));
