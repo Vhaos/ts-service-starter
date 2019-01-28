@@ -33,6 +33,6 @@ export default class BaseController {
   }
 
   getPaginationOptions(query: any): PaginationOptions {
-    return _.pick(query, ['page', 'per_page', 'projections', 'sort']);
+    return _.pick(query, ['paginate', 'page', 'per_page', 'projections', 'sort']);
   }
 }

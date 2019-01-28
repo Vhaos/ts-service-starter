@@ -86,6 +86,7 @@ export class BaseRepository<T extends Document> implements Repository<T> {
 
   all(query: Query): Promise<QueryResult<T>> {
     return new Promise((resolve, reject) => {
+      const paginate = query.paginate || false;
       const page = Number(query.page) - 1 || 0;
       const per_page = Number(query.per_page) || 20;
       const offset = page * per_page;
@@ -105,6 +106,7 @@ export class BaseRepository<T extends Document> implements Repository<T> {
         .exec((err, result) => {
           if (err) return reject(err);
           const queryResult = {
+            paginate,
             page: page + 1,
             per_page,
             sort,
